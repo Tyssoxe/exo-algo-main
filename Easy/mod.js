@@ -11,8 +11,8 @@ Notes
 All test cases contain valid numbers.
 */
 
-function mod( /*args*/ ) {
-  //your code
+function mod(a,n) {
+ console.log(a-(n*Math.floor(a/n)))
 }
 
 exports.solution = mod;

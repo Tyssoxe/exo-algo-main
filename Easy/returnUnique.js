@@ -10,8 +10,15 @@ Notes
 Keep the same ordering in the output.
 */
 
-function returnUnique( /*args*/ ) {
-  //your code
+function returnUnique(array ) {
+  let unique = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array.indexOf(array[i]) === array.lastIndexOf(array[i])) {
+            unique.push(array[i]);
+        }
+    }
+    return unique;
 }
+console.log(returnUnique([1, 9, 8, 8, 7, 6, 1, 6]));
 
 exports.solution = returnUnique;

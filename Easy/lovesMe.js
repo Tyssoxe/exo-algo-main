@@ -14,8 +14,22 @@ Remember to return a string.
 The first phrase is always "Loves me".
 */
 
-function lovesMe() {
- 
+function lovesMe(petals) {
+        let i = 0;
+        let phrase = "Loves me";
+        let phrase2 = "Loves me not";
+        let result = "";
+        for (i = 0; i < petals; i++) {
+            if (i % 2 === 0) {
+                result += phrase + ", ";
+            } else {
+                result += phrase2 + ", ";
+            }
+        }
+        result = result.slice(0, -2);
+        result += " " + phrase.toUpperCase();
+        console.log(result)
 }
+lovesMe(6);
 
 exports.solution = lovesMe;

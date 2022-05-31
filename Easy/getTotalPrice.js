@@ -41,10 +41,11 @@ There might be a floating point precision problem in here...
 */
 function getTotalPrice(groceries) 
 { 
-  let i =0
-  i = groceries
-  //let total = i[1[quantity]] * groceries[1[price]]
-  console.log(i[quantity])
+    let total = 0;
+    for (let i = 0; i < groceries.length; i++) {
+      total += groceries[i].quantity * groceries[i].price;
+    }
+    console.log(total) ;
 }
 getTotalPrice([
   { product: "Milk", quantity: 1, price: 1.50 },
